@@ -1,16 +1,32 @@
+@font-face {
+  font-family: 'CareAround';
+  src: local('CareAround'),
+    url('./fonts/CareAroundRegular.otf') format('opentype'),
+    url('./fonts/CareAroundItalic.otf') format('opentype');
+}
+
+body {
+  font-family: 'CareAround';
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 130px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-logo-footer {
+  height: 180px;
+}
+
+.aboutus {
+  height: 430px;
+}
+
+.ourClientsImg {
+  height: 100px;
 }
 
 .App-header {
@@ -26,13 +42,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
