@@ -8,8 +8,8 @@ export default function MediaCard({ img, text, imgSx, sx }) {
       <Stack>
         <Stack
           sx={{
-            width: 200,
-            height: 200,
+            width: 180,
+            height: 180,
             borderRadius: '50%',
             boxShadow: '2px 3px',
             backgroundColor: '#F4E0F9',

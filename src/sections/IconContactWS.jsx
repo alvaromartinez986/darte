@@ -13,6 +13,7 @@ const IconContactWS = () => {
         bottom: 30,
         rigth: 0,
         bgcolor: '#25D366',
+        zIndex: 10,
         '&:hover': {
           backgroundColor: '#25D366'
         }
