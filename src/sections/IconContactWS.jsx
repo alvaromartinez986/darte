@@ -11,8 +11,9 @@ const IconContactWS = () => {
         position: 'fixed',
         width: '70px',
         bottom: 30,
-        rigth: 0,
+        left: 30,
         bgcolor: '#25D366',
+        m: 0,
         zIndex: 10,
         '&:hover': {
           backgroundColor: '#25D366'

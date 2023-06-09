@@ -4,7 +4,7 @@ import { Stack, Button } from '@mui/material';
 export const MenuHeader = () => {
   return (
     <Stack
-      sx={{ height: '60px', bgcolor: '#8F148F', px: '400px' }}
+      sx={{ height: '60px', bgcolor: '#8F148F', px: '400px', width: '100%' }}
       direction="row"
       justifyContent={'space-around'}
     >
