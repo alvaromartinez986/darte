@@ -17,6 +17,10 @@ export default function MediaCard({ img, text, imgSx, sx }) {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
+            '@media (max-width: 480px)': {
+              width: 80,
+              height: 80
+            },
             ...imgSx
           }}
           title="green iguana"
@@ -30,7 +34,11 @@ export default function MediaCard({ img, text, imgSx, sx }) {
               fontFamily: 'CareAround',
               textAlign: 'center',
               color: 'black',
-              mt: '20px'
+              mt: '20px',
+              '@media (max-width: 480px)': {
+                fontSize: '12px',
+                mt: '10px'
+              }
             }}
             component="div"
           >

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Stack, Box, Typography, Link } from '@mui/material';
 import logo from '../assets/darteIcon.png';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -8,19 +9,34 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import Icon from '../components/Icon';
 
 const Footer = () => {
+  const matches = useMediaQuery('(max-width: 480px)');
+
   return (
     <Stack
-      sx={{ minHeigth: '300px', bgcolor: '#8F148F', mt: '200px', pt: '10px' }}
+      sx={{
+        minHeigth: '300px',
+        bgcolor: '#8F148F',
+        mt: matches ? '80px' : '200px',
+        pt: '10px'
+      }}
       direction="row"
       justifyContent="center"
     >
       <Box sx={{ mb: '10px' }}>
         <img src={logo} alt="" className="App-logo-footer" />
-        <Typography sx={{ color: 'white' }}>
+        <Typography sx={{ color: 'white', fontSize: matches ? '8px' : '18px' }}>
           Creando cosas unicas para regalar con amor
         </Typography>
       </Box>
-      <Stack sx={{ color: 'white', mt: '30px', ml: '140px', mr: '100px' }}>
+      <Stack
+        sx={{
+          color: 'white',
+          mt: '30px',
+          ml: '140px',
+          mr: '100px',
+          display: matches ? 'none' : ''
+        }}
+      >
         <Typography component="div" sx={{ fontWeight: 'bold' }}>
           CONTACTANOS
         </Typography>

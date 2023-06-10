@@ -12,21 +12,40 @@ const Header = () => {
   return (
     <Stack
       direction="row"
-      justifyContent="space-between"
-      sx={{ bgcolor: '#F6D0E2' }}
+      justifyContent="space-around"
+      sx={{ bgcolor: '#F6D0E2', minWidth: '100%' }}
+      spacing={{ lg: 30, sm: 5 }}
     >
-      <Box sx={{ ml: '400px', mt: '10px', mb: '10px' }}>
-        <img src={logo} alt="" className="App-logo" />
+      <Box
+        sx={{
+          mt: '10px',
+          mb: '10px',
+          height: '30%',
+          width: '30%'
+        }}
+      >
+        <img src={logo} alt="Darte" className="App-logo" />
       </Box>
-      <Stack direction="row" sx={{ mr: '280px', my: 'auto' }}>
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        spacing={{ lg: 6, sm: 8 }}
+      >
         <Link
           href="https://wa.me/message/R7ZLMJYDR47ZH1"
           rel="noopener"
           target="_blank"
+          sx={{
+            m: 'auto',
+            '@media (max-width: 480px)': {
+              display: 'none'
+            }
+          }}
         >
           <ButtonMain
             sx={{
               transition: 'all .2s ease-in-out',
+              fontSize: { lg: '16px', sm: '2px' },
               '&:hover': {
                 transform: 'scale(1.1)',
                 bgcolor: '#8F148F'
@@ -42,7 +61,7 @@ const Header = () => {
             rel="noopener"
             target="_blank"
           >
-            <InstagramIcon sx={{ fontSize: '40px' }} />
+            <InstagramIcon sx={{ fontSize: { lg: '2.5rem', sm: '1rem' } }} />
           </Link>
         </Icon>
         <Icon>
@@ -51,7 +70,7 @@ const Header = () => {
             rel="noopener"
             target="_blank"
           >
-            <WhatsAppIcon sx={{ fontSize: '40px' }} />
+            <WhatsAppIcon sx={{ fontSize: { lg: '2.5rem', sm: '1rem' } }} />
           </Link>
         </Icon>
       </Stack>

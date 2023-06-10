@@ -6,7 +6,6 @@ const Icon = ({ sx, children }) => (
     sx={{
       color: '#8F148F',
       my: 'auto',
-      ml: '30px',
       '&:hover': {
         backgroundColor: 'transparent'
       },
