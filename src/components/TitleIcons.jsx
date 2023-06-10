@@ -11,6 +11,9 @@ const TitleIcons = ({ text, sx }) => {
           fontFamily: 'CareAround',
           fontSize: '55px',
           color: '#8F148F',
+          '@media (max-width: 480px)': {
+            fontSize: '24px'
+          },
           ...sx
         }}
       >
@@ -28,9 +31,12 @@ const IconProducts = ({ sx }) => {
         fontSize: '24px',
         fontWeight: 'lighter',
         color: '#8F148F',
-        mt: '25px',
-        mx: '5px',
+        mt: '5%',
+        mx: '3px',
         opacity: '0.7',
+        '@media (max-width: 480px)': {
+          fontSize: '12px'
+        },
         ...sx
       }}
     />

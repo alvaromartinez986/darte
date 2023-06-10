@@ -12,7 +12,6 @@ const ButtonMain = ({ sx, children }) => {
         bgcolor: '#8F148F',
         color: 'white',
         borderRadius: '20px',
-        fontSize: '16px',
         fontWeight: 'bold',
         '&:hover': {
           bgcolor: '#8F148F'

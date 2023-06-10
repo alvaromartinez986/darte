@@ -14,16 +14,35 @@ body {
 }
 
 .App-logo {
-  height: 100%;
-  width: 95%;
+  height: 30%;
+  width: 30%;
+}
+
+@media (max-width: 480px) {
+  .App-logo {
+    height: 50%;
+    width: 50%;
+  }
 }
 
 .App-logo-footer {
   height: 180px;
 }
 
+@media (max-width: 480px) {
+  .App-logo-footer {
+    height: 90px;
+  }
+}
+
 .aboutus {
   height: 430px;
+}
+
+@media (max-width: 480px) {
+  .aboutus {
+    height: 200px;
+  }
 }
 
 .ourClientsImg {

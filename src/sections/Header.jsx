@@ -12,9 +12,9 @@ const Header = () => {
   return (
     <Stack
       direction="row"
-      justifyContent="center"
+      justifyContent="space-around"
       sx={{ bgcolor: '#F6D0E2', minWidth: '100%' }}
-      spacing={{ lg: 80, sm: 5 }}
+      spacing={{ lg: 30, sm: 5 }}
     >
       <Box
         sx={{
@@ -29,19 +29,23 @@ const Header = () => {
       <Stack
         direction="row"
         justifyContent="space-between"
-        spacing={{ lg: 6, sm: 1 }}
+        spacing={{ lg: 6, sm: 8 }}
       >
         <Link
           href="https://wa.me/message/R7ZLMJYDR47ZH1"
           rel="noopener"
           target="_blank"
-          sx={{ m: 'auto' }}
+          sx={{
+            m: 'auto',
+            '@media (max-width: 480px)': {
+              display: 'none'
+            }
+          }}
         >
           <ButtonMain
             sx={{
               transition: 'all .2s ease-in-out',
-              width: { lg: '180px', sm: '50px' },
-              fontSize: { lg: '16px', sm: '12px' },
+              fontSize: { lg: '16px', sm: '2px' },
               '&:hover': {
                 transform: 'scale(1.1)',
                 bgcolor: '#8F148F'

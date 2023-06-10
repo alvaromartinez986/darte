@@ -40,7 +40,12 @@ const CustomCarousel = () => {
       }}
     >
       {heights.map((item, i) => (
-        <Stack key={`test3-item-${i}`} sx={{ height: '100%' }}>
+        <Stack
+          key={`test3-item-${i}`}
+          sx={{
+            height: '100%'
+          }}
+        >
           <img src={item} alt="banne1" />
         </Stack>
       ))}

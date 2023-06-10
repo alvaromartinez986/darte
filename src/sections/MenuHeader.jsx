@@ -4,15 +4,16 @@ import { Stack, Button } from '@mui/material';
 export const MenuHeader = () => {
   return (
     <Stack
-      sx={{ height: '60px', bgcolor: '#8F148F', px: '400px', width: '100%' }}
+      sx={{ height: '60px', bgcolor: '#8F148F', width: '100%' }}
       direction="row"
-      justifyContent={'space-around'}
+      justifyContent={'center'}
+      spacing={{ lg: 10, sm: 2 }}
     >
-      <ButtonMenu>Camisetas</ButtonMenu>
-      <ButtonMenu>Gorras</ButtonMenu>
       <ButtonMenu>Combos</ButtonMenu>
+      <ButtonMenu>Termos</ButtonMenu>
       <ButtonMenu>Vasos</ButtonMenu>
-      <ButtonMenu>Caramaolas</ButtonMenu>
+      <ButtonMenu>Cuadernos</ButtonMenu>
+      <ButtonMenu>Publicidad</ButtonMenu>
     </Stack>
   );
 };
@@ -24,8 +25,9 @@ const ButtonMenu = ({ children }) => (
       transition: 'text-underline-offset 400ms',
       fontFamily: 'CareAround',
       fontWeight: 'bold',
-      fontSize: '20px',
+      fontSize: { lg: '1rem', sm: '0.5rem' },
       textTransform: 'none',
+      margin: 0,
       '&:hover': {
         bgcolor: '#8F148F',
         textDecoration: 'underline'
