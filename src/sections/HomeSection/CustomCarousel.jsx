@@ -2,8 +2,8 @@ import { Stack } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Banner1 from '../assets/BANNER1.jpg';
-import Banner2 from '../assets/BANNER2.jpg';
+import Banner1 from '../../assets/BANNER1.jpg';
+import Banner2 from '../../assets/BANNER2.jpg';
 
 const CustomCarousel = () => {
   const heights = [Banner1, Banner2];
