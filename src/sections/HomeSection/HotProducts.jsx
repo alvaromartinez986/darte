@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Stack, Typography } from '@mui/material';
-import MediaCard from '../components/MediaCard';
-import TitleIcons from '../components/TitleIcons';
+import MediaCard from '../../components/MediaCard';
+import TitleIcons from '../../components/TitleIcons';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import Image from '../assets/articulo1.png';
-import Image2 from '../assets/articulo2.png';
-import Image3 from '../assets/articulo3.png';
-import Image4 from '../assets/articulo4.png';
-import Image5 from '../assets/articulo5.png';
-import Image6 from '../assets/articulo6.png';
+import Image from '../../assets/articulo1.png';
+import Image2 from '../../assets/articulo2.png';
+import Image3 from '../../assets/articulo3.png';
+import Image4 from '../../assets/articulo4.png';
+import Image5 from '../../assets/articulo5.png';
+import Image6 from '../../assets/articulo6.png';
 
 const HotProducts = () => {
   const matches = useMediaQuery('(max-width: 480px)');

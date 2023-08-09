@@ -1,14 +1,14 @@
 import { Stack, Typography } from '@mui/material';
 import React, { useState, useEffect } from 'react';
-import TitleIcons from '../components/TitleIcons';
+import TitleIcons from '../../components/TitleIcons';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import Client1 from '../assets/joy.png';
-import Client2 from '../assets/evolucion.png';
-import Client3 from '../assets/piaget.png';
-import Client4 from '../assets/duqueria.png';
-import Client5 from '../assets/dental.png';
-import Client6 from '../assets/yoga.png';
+import Client1 from '../../assets/joy.png';
+import Client2 from '../../assets/evolucion.png';
+import Client3 from '../../assets/piaget.png';
+import Client4 from '../../assets/duqueria.png';
+import Client5 from '../../assets/dental.png';
+import Client6 from '../../assets/yoga.png';
 
 const OurClients = () => {
   const matches = useMediaQuery('(max-width: 480px)');

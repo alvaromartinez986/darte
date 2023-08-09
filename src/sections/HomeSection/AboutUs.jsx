@@ -2,12 +2,14 @@ import React from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { Box, Stack, Typography } from '@mui/material';
-import Image from '../assets/amorcito.png';
-import TitleIcons from '../components/TitleIcons';
-import ButtonMain from '../components/ButtonMain';
+import Image from '../../assets/amorcito.png';
+import TitleIcons from '../../components/TitleIcons';
+import ButtonMain from '../../components/ButtonMain';
+import { useNavigate } from 'react-router-dom';
 
 const AboutUs = () => {
   const matches = useMediaQuery('(max-width: 480px)');
+  const navigate = useNavigate();
 
   return (
     <Stack
@@ -39,7 +41,14 @@ const AboutUs = () => {
           creado esta tienda especialmente diseñada para ti y para todos
           aquellos que valoran lo auténtico.
         </Typography>
-        <ButtonMain sx={{ height: '50px', my: '10px' }}>Tienda</ButtonMain>
+        <ButtonMain
+          sx={{ height: '50px', my: '10px' }}
+          onClick={() => {
+            navigate('/products');
+          }}
+        >
+          Tienda
+        </ButtonMain>
       </Stack>
     </Stack>
   );

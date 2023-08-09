@@ -1,21 +1,18 @@
 import React from 'react';
 import { Button } from '@mui/material';
 
-const ButtonMain = ({ sx, children }) => {
+const ButtonMain = ({ sx, onClick, children }) => {
   return (
     <Button
+      variant="contained"
+      onClick={onClick}
       sx={{
         height: '50px',
         width: '180px',
-        fontFamily: 'CareAround',
         m: 'auto',
-        bgcolor: '#8F148F',
         color: 'white',
         borderRadius: '20px',
         fontWeight: 'bold',
-        '&:hover': {
-          bgcolor: '#8F148F'
-        },
         ...sx
       }}
     >

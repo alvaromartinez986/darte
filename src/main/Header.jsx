@@ -24,7 +24,10 @@ const Header = () => {
           width: '30%'
         }}
       >
-        <img src={logo} alt="Darte" className="App-logo" />
+        {' '}
+        <Link href="./">
+          <img src={logo} alt="Darte" className="App-logo" />
+        </Link>
       </Box>
       <Stack
         direction="row"
