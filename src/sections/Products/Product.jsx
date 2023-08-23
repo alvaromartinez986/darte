@@ -10,7 +10,17 @@ import { Stack, Grid } from "@mui/material";
 const Product = ({ img, name, whatsappUrl, price }) => {
   return (
     <Grid item xs={4} md={2} sx={{ mx: 15 }}>
-      <Card sx={{ width: 280, mt: 10, border: "none" }}>
+      <Card
+        sx={{
+          width: 280,
+          height: 380,
+          mt: 10,
+          border: "none",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
         <CardMedia
           sx={{
             alignItems: "center",
