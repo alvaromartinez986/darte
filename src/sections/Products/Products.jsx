@@ -26,7 +26,12 @@ const Products = () => {
   }, []);
 
   return (
-    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, md: 4 }}>
+    <Grid
+      container
+      rowSpacing={1}
+      columnSpacing={{ xs: 1, md: 4 }}
+      sx={{ ml: "auto !important" }}
+    >
       {products.length === 0 ? (
         <CircularProgress />
       ) : (

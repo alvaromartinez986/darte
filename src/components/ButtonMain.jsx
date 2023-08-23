@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '@mui/material';
+import React from "react";
+import { Button } from "@mui/material";
 
 const ButtonMain = ({ sx, onClick, children }) => {
   return (
@@ -7,13 +7,12 @@ const ButtonMain = ({ sx, onClick, children }) => {
       variant="contained"
       onClick={onClick}
       sx={{
-        height: '50px',
-        width: '180px',
-        m: 'auto',
-        color: 'white',
-        borderRadius: '20px',
-        fontWeight: 'bold',
-        ...sx
+        height: "50px",
+        width: "180px",
+        color: "white",
+        borderRadius: "20px",
+        fontWeight: "bold",
+        ...sx,
       }}
     >
       {children}
