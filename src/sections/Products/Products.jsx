@@ -10,7 +10,7 @@ const Products = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          process.env.REACT_APP_API_URL + "/products?populate=*",
+          process.env.REACT_APP_API_URL + "/products?populate=*&sort=order",
           {
             headers: {
               Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
@@ -33,7 +33,7 @@ const Products = () => {
       sx={{ ml: "auto !important" }}
     >
       {products.length === 0 ? (
-        <CircularProgress />
+        <CircularProgress sx={{ mx: "auto", my: 20, width: "100%" }} />
       ) : (
         products.map((product) => (
           <Product
