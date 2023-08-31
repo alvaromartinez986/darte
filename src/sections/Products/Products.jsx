@@ -1,51 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Product from "./Product";
-import { CircularProgress, Grid } from "@mui/material";
-import axios from "axios";
+import { CircularProgress, Stack } from "@mui/material";
+import useFetchData from "../../hooks/useFetchData";
+import Filter from "./Filter";
+
+const buildFilterfetch = (filter) => {
+  return filter ? `[filters][categories][id]=${filter}` : "";
+};
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          process.env.REACT_APP_API_URL + "/products?populate=*&sort=order",
-          {
-            headers: {
-              Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
-            },
-          }
-        );
-        setProducts(res.data.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+  const [filterProducts, setFilterProducts] = useState("");
+  const { data: products, loading } = useFetchData(
+    "/products?populate=*&sort=order&" + buildFilterfetch(filterProducts)
+  );
 
   return (
-    <Grid
-      container
-      rowSpacing={1}
-      columnSpacing={{ xs: 1, md: 4 }}
-      sx={{ ml: "auto !important" }}
+    <Stack
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        justifyContent: "start",
+      }}
     >
-      {products.length === 0 ? (
-        <CircularProgress sx={{ mx: "auto", my: 20, width: "100%" }} />
-      ) : (
-        products.map((product) => (
-          <Product
-            key={product.attributes.title}
-            img={product.attributes.img.data.attributes.url}
-            whatsappUrl={product.attributes.whatsappUrl}
-            name={product.attributes.title}
-            price={product.attributes.price}
-          />
-        ))
-      )}
-    </Grid>
+      <Filter
+        setFilterProducts={setFilterProducts}
+        filterProducts={filterProducts}
+      />
+      <Stack
+        sx={{
+          width: "80vh",
+          display: "grid",
+          gridTemplateColumns: "500px 500px 500px",
+        }}
+      >
+        {loading ? (
+          <CircularProgress sx={{ mx: "auto", my: 20, width: "100%" }} />
+        ) : (
+          products.map((product) => (
+            <Product
+              key={product.attributes.title}
+              img={product.attributes.img.data.attributes.url}
+              whatsappUrl={product.attributes.whatsappUrl}
+              name={product.attributes.title}
+              price={product.attributes.price}
+            />
+          ))
+        )}
+      </Stack>
+    </Stack>
   );
 };
 

@@ -24,7 +24,7 @@ const Product = ({ img, name, whatsappUrl, price }) => {
         <CardMedia
           sx={{
             alignItems: "center",
-            backgroundSize: "220px 220px",
+            backgroundSize: "90%",
             height: 280,
           }}
           image={img}
