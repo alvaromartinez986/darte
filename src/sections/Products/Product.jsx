@@ -5,53 +5,51 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Stack, Grid } from "@mui/material";
+import { Stack } from "@mui/material";
 
 const Product = ({ img, name, whatsappUrl, price }) => {
   return (
-    <Grid item xs={4} md={2} sx={{ mx: 15 }}>
-      <Card
+    <Card
+      sx={{
+        width: 280,
+        height: 380,
+        mt: 10,
+        border: "none",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
+      <CardMedia
         sx={{
-          width: 280,
-          height: 380,
-          mt: 10,
-          border: "none",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
+          alignItems: "center",
+          backgroundSize: "90%",
+          height: 280,
         }}
-      >
-        <CardMedia
-          sx={{
-            alignItems: "center",
-            backgroundSize: "90%",
-            height: 280,
-          }}
-          image={img}
-          title="green iguana"
-        />
-        <CardContent>
-          <Typography variant="h5" component="div" sx={{ textAlign: "center" }}>
-            {name}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Stack direction="row" spacing={2} ml={1}>
-            <Typography>Precio: ${price.toLocaleString()} </Typography>
-            <Button
-              size="small"
-              variant="contained"
-              onClick={() => {
-                window.location.href =
-                  "https://wa.me/+573183027621?text=" + whatsappUrl;
-              }}
-            >
-              Comprar
-            </Button>
-          </Stack>
-        </CardActions>
-      </Card>
-    </Grid>
+        image={img}
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography variant="h5" component="div" sx={{ textAlign: "center" }}>
+          {name}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Stack direction="row" spacing={2} ml={1}>
+          <Typography>Precio: ${price.toLocaleString()} </Typography>
+          <Button
+            size="small"
+            variant="contained"
+            onClick={() => {
+              window.location.href =
+                "https://wa.me/+573183027621?text=" + whatsappUrl;
+            }}
+          >
+            Comprar
+          </Button>
+        </Stack>
+      </CardActions>
+    </Card>
   );
 };
 
