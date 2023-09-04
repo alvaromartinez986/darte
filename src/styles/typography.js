@@ -11,6 +11,9 @@ export default {
   },
   h3: {
     fontSize: 48,
+    '@media (max-width:500px)': {
+      fontSize: 30,
+    },
     fontWeight: 'normal'
   },
   h4: {

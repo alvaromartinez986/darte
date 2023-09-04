@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FormGroup,
   Stack,
@@ -8,16 +8,30 @@ import {
   RadioGroup,
 } from "@mui/material";
 import { useAppContext } from "../../contexts/AppContext";
+import { useQuery } from "./Products";
 
 const Filter = ({ filterProducts, setFilterProducts }) => {
   const { categories } = useAppContext();
+  let query = useQuery();
 
   const handleChange = (event) => {
     setFilterProducts(event.target.value);
   };
 
+  useEffect(() => {
+    setFilterProducts(query.get("idCategory"));
+  }, [query, setFilterProducts]);
+
   return (
-    <Stack sx={{ p: 10, width: "20vh" }}>
+    <Stack
+      sx={{
+        p: 10,
+        width: "5%",
+        "@media (max-width:500px)": {
+          display: "none",
+        },
+      }}
+    >
       <Typography variant="h3">Categorias</Typography>
       <FormGroup sx={{ mt: 5 }}>
         <RadioGroup value={filterProducts} onChange={handleChange}>

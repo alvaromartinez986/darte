@@ -18,7 +18,7 @@ export const MenuHeader = () => {
         <ButtonMenu
           key={category.attributes.title}
           onClick={() => {
-            navigate("/products");
+            navigate(`/products?idCategory=${category.id}`);
           }}
         >
           {category.attributes.title}
