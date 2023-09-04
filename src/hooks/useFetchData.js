@@ -6,11 +6,12 @@ const useFetchData = (urlData) => {
     const [loading, setLoading] = useState(true);
 
     const fetchData = useCallback(
-        async () => {
+        async (params) => {
             try {
+                const url = (params || urlData);
                 setLoading(true);
                 const res = await axios.get(
-                    process.env.REACT_APP_API_URL + urlData,
+                    process.env.REACT_APP_API_URL + url,
                     {
                         headers: {
                             Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
@@ -32,7 +33,7 @@ const useFetchData = (urlData) => {
         fetchData();
     }, [fetchData])
 
-    return { data, loading };
+    return { data, loading, fetchData };
 
 }
 
