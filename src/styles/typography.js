@@ -17,7 +17,7 @@ export default {
     fontWeight: 'normal'
   },
   h4: {
-    fontSize: 34,
+    fontSize: 20,
     lineHeight: '48px',
     fontWeight: 'normal'
   },
