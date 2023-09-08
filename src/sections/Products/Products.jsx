@@ -3,13 +3,7 @@ import Product from "./Product";
 import { CircularProgress, Stack, TextField } from "@mui/material";
 import useFetchData from "../../hooks/useFetchData";
 import Filter from "./Filter";
-import { useLocation } from "react-router";
-
-export function useQuery() {
-  const { search } = useLocation();
-
-  return React.useMemo(() => new URLSearchParams(search), [search]);
-}
+import { useQuery } from "../../hooks/useQuery";
 
 const buildFilterfetch = (filter, name) => {
   const category = filter ? `[categories][id]=${filter}&` : "";
@@ -79,7 +73,8 @@ const ProductsList = ({ products, loading }) => (
     ) : (
       products.map((product) => (
         <Product
-          key={product.attributes.title}
+          key={product.id}
+          id={product.id}
           img={product.attributes.img.data.attributes.url}
           whatsappUrl={product.attributes.whatsappUrl}
           name={product.attributes.title}

@@ -6,8 +6,11 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-const Product = ({ img, name, whatsappUrl, price }) => {
+const Product = ({ id, img, name, whatsappUrl, price }) => {
+  const navigate = useNavigate();
+
   return (
     <Card
       sx={{
@@ -28,6 +31,7 @@ const Product = ({ img, name, whatsappUrl, price }) => {
         }}
         image={img}
         title="green iguana"
+        onClick={() => navigate(`/products/${id}`)}
       />
       <CardContent>
         <Typography variant="h5" component="div" sx={{ textAlign: "center" }}>

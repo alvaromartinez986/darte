@@ -26,7 +26,7 @@ const Header = () => {
           width: "30%",
         }}
       >
-        <Link href="./">
+        <Link href="/">
           <img src={logo} alt="Darte" className="App-logo" />
         </Link>
       </Box>

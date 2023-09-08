@@ -8,7 +8,7 @@ import {
   RadioGroup,
 } from "@mui/material";
 import { useAppContext } from "../../contexts/AppContext";
-import { useQuery } from "./Products";
+import { useQuery } from "../../hooks/useQuery";
 
 const Filter = ({ filterProducts, setFilterProducts }) => {
   const { categories } = useAppContext();
