@@ -34,7 +34,7 @@ const OurClients = () => {
   }, [matches, clients]);
 
   return (
-    <Stack direction="column" mt={matches ? "40px" : "0"}>
+    <Stack direction="column" mt={matches ? "60px" : "0"}>
       <TitleIcons text="Nuestros Clientes" />
       <Typography
         sx={{
